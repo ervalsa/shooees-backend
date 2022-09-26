@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function all(Request $request) {
         $id = $request->input('id');
-        $limit = $request->input('limit');
+        $limit = $request->input('limit', 6);
         $name = $request->input('name');
         $description = $request->input('description');
         $tags = $request->input('tags');
