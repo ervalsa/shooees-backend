@@ -11,8 +11,8 @@ Request:
 - Body:
 ```json
 {
-    email: "example@gmail.com",
-    password: "123456789"
+    "email": "example@gmail.com",
+    "password": 123456789
 }
 ``` 
 - Response:
