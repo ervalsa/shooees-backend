@@ -13,13 +13,6 @@ use Laravel\Fortify\Rules\Password;
 
 class UserController extends Controller
 {
-    public function fetch(Request $request) {
-        return ResponseFormatter::success(
-            $request->user(),
-            'Data profile user berhasil diambil'
-        );
-    }
-
     public function register(Request $request) {
         try {
             $request->validate([
@@ -87,5 +80,12 @@ class UserController extends Controller
                 'error' => $error,
             ],'Authentication Failed', 500);
         }
+    }
+
+    public function fetch(Request $request) {
+        return ResponseFormatter::success(
+            $request->user(),
+            'Data profile User berhasil diambil'
+        );
     }
 }
